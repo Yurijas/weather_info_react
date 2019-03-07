@@ -3,7 +3,7 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header';
 import Weather from './views/weather';
-import Sample from './views/sample';
+import Data from './views/data';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <div className="container">
           <Switch>
             <Route exact path='/' render={() => <Weather />} />
-            <Route exact path='/sample' render={() => <Sample />} />
+            <Route exact path='/data' render={() => <Data />} />
           </Switch>
         </div>
       </div>

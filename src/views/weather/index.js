@@ -13,7 +13,7 @@ class Weather extends Component {
       'API_KEY': ''
     }
   }
-
+  
   componentWillMount() {
     this.setState({'API_KEY': API_KEY});
   }
@@ -22,7 +22,7 @@ class Weather extends Component {
     e.preventDefault();
     let city = e.target.elements.city.value;
     let country = e.target.elements.country.value;
-    if (country == '' || country == null) {
+    if (country === '' || country === null) {
       country ='US';
     }
     const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${this.state.API_KEY}`;
